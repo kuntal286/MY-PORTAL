@@ -1,0 +1,255 @@
+
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Govt & Education Exam Portal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #e3f2fd);
+      color: #212121;
+    }
+
+    header {
+      background: linear-gradient(90deg, #1e88e5, #42a5f5);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      animation: slideIn 1s ease-out;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    nav p {
+      font-size: 1.1em;
+      margin-top: 10px;
+    }
+
+    .search-box {
+      text-align: center;
+      margin: 30px;
+    }
+
+    .search-box input {
+      width: 80%;
+      max-width: 450px;
+      padding: 12px 15px;
+      font-size: 16px;
+      border: 2px solid #1e88e5;
+      border-radius: 25px;
+      outline: none;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .search-box input:focus {
+      border-color: #00c853;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .section {
+      background: white;
+      margin: 20px auto;
+      max-width: 900px;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease;
+    }
+
+    .section h2 {
+      color: #1e88e5;
+      margin-bottom: 15px;
+      font-size: 1.6em;
+    }
+
+    ul.exam-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .exam-list li {
+      margin-bottom: 12px;
+      padding: 8px 15px;
+      background: #e3f2fd;
+      border-left: 5px solid #1e88e5;
+      border-radius: 8px;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .exam-list li:hover {
+      background: #bbdefb;
+      transform: translateX(10px);
+    }
+
+    .exam-list a {
+      text-decoration: none;
+      color: #0d47a1;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .exam-list a:hover {
+      color: #d32f2f;
+    }
+
+    footer {
+      background: linear-gradient(90deg, #1e88e5, #42a5f5);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 600px) {
+      .search-box input {
+        width: 95%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Government & Education Exam Portal</h1>
+    <nav>
+      <p>All national/state exam & university links in one place</p>
+    </nav>
+  </header>
+
+  <div class="search-box">
+    <input type="text" id="search" placeholder="🔍 Search exams or universities..." onkeyup="filterLinks()">
+  </div>
+
+  <div class="section" id="engineering">
+    <h2>🛠 Engineering Exams</h2>
+    <ul class="exam-list">
+      <li><a href="https://jeemain.nta.nic.in/" target="_blank">JEE Mains</a></li>
+      <li><a href="https://www.iitg.ac.in/jee/" target="_blank">IIT JEE (Advanced)</a></li>
+      <li><a href="https://wbjeeb.nic.in/" target="_blank">WBJEE</a></li>
+    </ul>
+  </div>
+
+  <div class="section" id="upsc">
+    <h2>🧠 UPSC Exams</h2>
+    <ul class="exam-list">
+      <li><a href="https://www.upsc.gov.in/" target="_blank">UPSC Official</a></li>
+      <li><a href="https://upsconline.nic.in/" target="_blank">UPSC Online</a></li>
+    </ul>
+  </div>
+
+  <div class="section" id="ssc">
+    <h2>📋 SSC Exams</h2>
+    <ul class="exam-list">
+      <li><a href="https://ssc.gov.in/" target="_blank">SSC new website</a></li>
+      <li><a href="https://ssc.nic.in/" target="_blank">SSC old website</a></li>
+    </ul>
+  </div>
+
+  <div class="section" id="railways">
+    <h2>🚉 Railway Exams</h2>
+    <ul class="exam-list">
+      <li><a href="https://www.rrbapply.gov.in/" target="_blank">Railway Recruitment Board</a></li>
+    </ul>
+  </div>
+
+  <div class="section" id="banking">
+    <h2>🏦 Banking Exams</h2>
+    <ul class="exam-list">
+      <li><a href="https://ibps.in/" target="_blank">IBPS</a></li>
+      <li><a href="https://sbi.co.in/web/careers" target="_blank">SBI Careers</a></li>
+      <li><a href="https://rbi.org.in/" target="_blank">RBI Exams</a></li>
+    </ul>
+  </div>
+
+  <div class="section" id="defense">
+    <h2>🪖 Defense Exams</h2>
+    <ul class="exam-list">
+      <li><a href="https://joinindianarmy.nic.in/" target="_blank">Indian Army</a></li>
+      <li><a href="https://www.joinindiannavy.gov.in/" target="_blank">Indian Navy</a></li>
+      <li><a href="https://afcat.cdac.in/" target="_blank">Indian Air Force (AFCAT)</a></li>
+    </ul>
+  </div>
+
+  <div class="section" id="state">
+    <h2>🏛 State Level Exams</h2>
+    <ul class="exam-list">
+      <li><a href="https://pscwbapplication.in/" target="_blank">WBPSC</a></li>
+      <li><a href="https://www.wbsubregistration.org/" target="_blank">WBSU Exam Portal</a></li>
+    </ul>
+  </div>
+
+  <div class="section" id="education">
+    <h2>🎓 Education Portals & Universities</h2>
+    <ul class="exam-list">
+      <li><a href="https://www.ugc.ac.in/" target="_blank">UGC</a></li>
+      <li><a href="https://www.nptel.ac.in/" target="_blank">NPTEL</a></li>
+      <li><a href="https://cuet.samarth.ac.in/" target="_blank">CUET</a></li>
+      <li><a href="https://www.vidyalakshmi.co.in/" target="_blank">Vidya Lakshmi (Loan Portal)</a></li>
+      <li><a href="https://www.aiu.ac.in/" target="_blank">AIU (Universities)</a></li>
+    </ul>
+  </div>
+  <div class="section" id="education">
+    <h2>🎓 Education Portals & Universities</h2>
+    <ul class="exam-list">
+      <li><a href="https://www.ugc.ac.in/" target="_blank">UGC</a></li>
+      <li><a href="https://www.nptel.ac.in/" target="_blank">NPTEL</a></li>
+      <li><a href="https://cuet.samarth.ac.in/" target="_blank">CUET</a></li>
+      <li><a href="https://www.vidyalakshmi.co.in/" target="_blank">Vidya Lakshmi (Loan Portal)</a></li>
+      <li><a href="https://www.aiu.ac.in/" target="_blank">AIU (Universities)</a></li>
+      <li><a href="https://www.iitg.ac.in/" target="_blank">IIT Guwahati</a></li>
+      <li><a href="https://www.iitb.ac.in/" target="_blank">IIT Bombay</a></li>
+      <li><a href="https://www.iitr.ac.in/" target="_blank">IIT Roorkee</a></li>
+      <li><a href="https://www.iitkgp.ac.in/" target="_blank">IIT Kharagpur</a></li>
+      <li><a href="https://www.iitd.ac.in/" target="_blank">IIT Delhi</a></li>
+      <li><a href="https://www.jmi.ac.in/" target="_blank">Jamia Millia Islamia</a></li>
+      <li><a href="https://www.du.ac.in/" target="_blank">University of Delhi</a></li>
+      <li><a href="https://www.jnu.ac.in/" target="_blank">JNU (New Delhi)</a></li>
+      <li><a href="https://www.bhu.ac.in/" target="_blank">Banaras Hindu University</a></li>
+      <li><a href="https://www.caluniv.ac.in/" target="_blank">University of Calcutta</a></li>
+      <li><a href="https://www.manipal.edu/" target="_blank">Manipal University</a></li>
+      <li><a href="https://www.amity.edu/" target="_blank">Amity University</a></li>
+      <li><a href="https://www.shivaji.ac.in/" target="_blank">Shivaji University</a></li>
+      <li><a href="https://www.osmania.ac.in/" target="_blank">Osmania University</a></li>
+      <li><a href="https://unishivaji.ac.in/" target="_blank">Savitribai Phule Pune University</a></li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Govt Exam Portal | Designed with ❤️ for students & aspirants</p>
+  </footer>
+
+  <script>
+    function filterLinks() {
+      const input = document.getElementById('search').value.toLowerCase();
+      const links = document.querySelectorAll('.exam-list li');
+      links.forEach(link => {
+        const text = link.textContent.toLowerCase();
+        link.style.display = text.includes(input) ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
