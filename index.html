@@ -15,6 +15,7 @@
     color: white; border-radius: 20px; cursor: pointer; box-shadow:0 4px 8px rgba(0,0,0,0.2);
 }
 </style>
+   
 
   <style>
     body {
@@ -110,6 +111,52 @@
     .exam-list a:hover {
       color: #d32f2f;
     }
+     .notification-bar {
+  background-color: #f9f3c9;
+  border: 2px solid #ffd95a;
+  padding: 15px;
+  margin: 20px auto;
+  width: 95%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
+}
+
+.notification-bar h2 {
+  color: #d19a00;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.notification-bar ul {
+  list-style-type: none;
+  padding-left: 0;
+  animation: scroll-up 15s linear infinite;
+  max-height: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+.notification-bar li {
+  padding: 5px 0;
+  font-size: 1em;
+  color: #333;
+}
+
+.notification-bar li a {
+  color: #0077cc;
+  text-decoration: underline;
+}
+
+.notification-bar .date {
+  font-weight: bold;
+  color: #ff5500;
+}
+
+@keyframes scroll-up {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100%); }
+}
+
 
     footer {
       background: linear-gradient(90deg, #1e88e5, #42a5f5);
