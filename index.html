@@ -190,7 +190,7 @@
   </style>
 </head>
 <body>
-    <button class="theme-toggle" onclick="toggleTheme()">Toggle Light/Dark</button>
+    <button class="theme-toggle" onclick="toggleTheme()">Change Theme</button>
   <header>
     <h1>Government & Education Exam Portal</h1>
     <nav>
@@ -203,16 +203,14 @@
   <div class="search-box">
     <input type="text" id="search" placeholder="🔍 Search exams or universities..." onkeyup="filterLinks()">
   </div>
-<!-- Exam Calendar & Notifications -->
-<div class="section" id="exam-calendar">
-  <h2>📅 Upcoming Exams & Notifications</h2>
-  <ul class="exam-list">
-    <li>CTET 2025 Notification — expected Aug 2025</li>
-    <li>UGC‑NET June & Dec sessions yearly</li>
-    <li>WBJEE, NEET, GATE, CAT – check official portals regularly</li>
-    <!-- You can manually update this -->
+<!-- 🔔 Notification Bar Section -->
+<div class="notification-bar">
+  <h2>🔔 Latest Notifications</h2>
+  <ul id="notifications">
+    <li><span class="date">18 July 2025</span> – Last date of chsl form submission (<a href="https://ssc.gov.in/" target="_blank">View</a>)</li>
   </ul>
 </div>
+
 
   <div class="section" id="engineering">
     <h2>🛠 Engineering Exams</h2>
