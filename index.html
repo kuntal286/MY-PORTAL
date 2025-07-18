@@ -5,6 +5,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Govt & Education Exam Portal</title>
+   <style>
+  body.dark {background: #121212; color: #e0e0e0;}
+  body.dark .section {background: #1e1e1e;}
+  body.dark .search-box input {border-color: #eee;}
+  .theme-toggle {
+    position: fixed; top: 10px; right: 10px;
+    background: #42a5f5; border: none; padding: 8px 12px;
+    color: white; border-radius: 20px; cursor: pointer; box-shadow:0 4px 8px rgba(0,0,0,0.2);
+}
+</style>
+
   <style>
     body {
       margin: 0;
@@ -142,6 +153,16 @@
   <div class="search-box">
     <input type="text" id="search" placeholder="🔍 Search exams or universities..." onkeyup="filterLinks()">
   </div>
+<!-- Exam Calendar & Notifications -->
+<div class="section" id="exam-calendar">
+  <h2>📅 Upcoming Exams & Notifications</h2>
+  <ul class="exam-list">
+    <li>CTET 2025 Notification — expected Aug 2025</li>
+    <li>UGC‑NET June & Dec sessions yearly</li>
+    <li>WBJEE, NEET, GATE, CAT – check official portals regularly</li>
+    <!-- You can manually update this -->
+  </ul>
+</div>
 
   <div class="section" id="engineering">
     <h2>🛠 Engineering Exams</h2>
